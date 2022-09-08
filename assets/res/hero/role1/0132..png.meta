@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.24",
+  "importer": "image",
+  "imported": true,
+  "uuid": "cafeeddb-b69d-41a4-827c-0f6497905761",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "cafeeddb-b69d-41a4-827c-0f6497905761@6c48a",
+      "displayName": "0132.",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "cafeeddb-b69d-41a4-827c-0f6497905761",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "cafeeddb-b69d-41a4-827c-0f6497905761@f9941",
+      "displayName": "0132.",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 46.5,
+        "offsetY": -58,
+        "trimX": 433,
+        "trimY": 318,
+        "width": 187,
+        "height": 120,
+        "rawWidth": 960,
+        "rawHeight": 640,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -93.5,
+            -60,
+            0,
+            93.5,
+            -60,
+            0,
+            -93.5,
+            60,
+            0,
+            93.5,
+            60,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            433,
+            322,
+            620,
+            322,
+            433,
+            202,
+            620,
+            202
+          ],
+          "nuv": [
+            0.4510416666666667,
+            0.315625,
+            0.6458333333333334,
+            0.315625,
+            0.4510416666666667,
+            0.503125,
+            0.6458333333333334,
+            0.503125
+          ],
+          "minPos": [
+            -93.5,
+            -60,
+            0
+          ],
+          "maxPos": [
+            93.5,
+            60,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "cafeeddb-b69d-41a4-827c-0f6497905761@6c48a",
+        "atlasUuid": ""
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": true,
+    "hasAlpha": true,
+    "redirect": "cafeeddb-b69d-41a4-827c-0f6497905761@f9941"
+  }
+}
