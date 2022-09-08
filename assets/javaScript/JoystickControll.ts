@@ -83,11 +83,9 @@ export class JoystickControll extends Component {
     update(deltaTime: number) {
         if (this.moving) {
             //将小圆限制大圆范围内
-            console.log("this.btn.position", this.btn.position);
             let ratio = this.btn.position.length() / this.panelWidth;
             let xbi = this.btn.position.x / this.btn.position.length();
             let ybi = this.btn.position.y / this.btn.position.length();
-            console.log("ratio", this.btn.position.length());
             if (ratio > 1) {
  
                 this.btn.setPosition(new Vec3(xbi * this.panelWidth, ybi * this.panelWidth, 0));

@@ -1,5 +1,5 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3 } from 'cc';
-import { joystick } from './joystick';
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, Animation, AnimationClip, animation } from 'cc';
+
 const { ccclass, property } = _decorator;
 
 enum MonsterType{
@@ -14,11 +14,15 @@ export class Monster extends Component {
     // 赛道长度
     @property
     public monsterNum = 10;
-    private _monsterArr: Node[] = [];
+   
+    public monsterArr: Node[] = [];
 
 
     @property({type:Node})
     public player: Node | null = null;
+
+    @property({type:Node})
+    public monsterNode: Node | null = null;
 
     private initTime:number = 0;
     //速度
@@ -31,18 +35,19 @@ export class Monster extends Component {
 
 
     generateMonster() {
-        if(this._monsterArr.length >this.monsterNum){
+        if(this.monsterArr.length >this.monsterNum){
             return;
         }    
         
         let block: Node = this.spawnBlockByType(MonsterType.MonsterType_One);
             // 判断是否生成了道路，因为 spawnBlockByType 有可能返回坑（值为 null）
             if (block) {
-                this.node.addChild(block);
+                this.monsterNode.addChild(block);
                 var x = Math.floor(Math.random() * 600);
                 var y = Math.floor(Math.random() * 900);
                 block.setPosition(300, 100, 0);
-                this._monsterArr.push(block);
+                block.getComponent(Animation).play('run_hero04')
+                this.monsterArr.push(block);
             }
     }
     
@@ -53,7 +58,6 @@ export class Monster extends Component {
         }
 
         let block: Node | null = null;
-        // 赛道类型为实路才生成
         switch(type) {
             case MonsterType.MonsterType_One:
                 block = instantiate(this.cubePrfb);
@@ -69,7 +73,7 @@ export class Monster extends Component {
         this.initTime++;
     	//判断player和enemy节点距离，并且60帧才进行一次实时朝向的判断
     	let playerPos = this.player.worldPosition;
-        let monster1 = this._monsterArr[0]
+        let monster1 = this.monsterArr[0]
     	let thisPos = monster1.worldPosition;
     	let r = Math.atan2(playerPos.y - thisPos.y, playerPos.x - thisPos.x);
         	let degree = r * 180 / Math.PI;
